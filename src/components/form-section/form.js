@@ -1,6 +1,7 @@
 import { Component } from "react";
 import style from './FormStyle.module.css';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
+import PropTypes from "prop-types";
 // import { initialState } from "./initialState";
 
 
@@ -19,7 +20,7 @@ state = {...initialState}
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.addContact(this.state)
+    this.props.addContact(this.state);
     this.setState({...initialState});
   };
 
@@ -58,6 +59,14 @@ state = {...initialState}
       </form>
     );
   }
+}
+
+Form.defaultProps = {
+  addContact:()=>{},
+}
+
+Form.propTypes = {
+  addContact: PropTypes.func,
 }
 
 export default Form;

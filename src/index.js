@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
 
 ReactDOM.render(
   <React.StrictMode>
